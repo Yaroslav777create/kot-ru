@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео про котов</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background-color: #13BDAC;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== ШАПКА ===== */
+
+        header {
+            background-color: #FCBA03;
+            padding: 35px 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .head-site__in_header {
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .head-site__in_header2 {
+            font-size: 30px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 55px;
+            position: sticky;
+            top: 5px;
+            background-color: #13bdac83;
+            padding: 8px;
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #FCBA03;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #FCBA03;
+        }
+
+        /* ===== ТЕКСТ ===== */
+
+        p {
+            padding: 10px;
+        }
+
+        /* ===== ВИДЕО ===== */
+
+        .youtube {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .youtube iframe,
+        .youtube video {
+            width: min(560px, 100%);
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            min-width: 0;
+        }
+
+        /* =====================================
+           БОЛЬШИЕ МОНИТОРЫ: ОТ 1600 PX
+        ===================================== */
+
+        @media (min-width: 1600px) {
+            header {
+                padding: 45px 20px;
+            }
+
+            .head-site__in_header {
+                font-size: 60px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 35px;
+            }
+
+            .youtube {
+                gap: 30px;
+                padding: 30px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: 650px;
+            }
+
+            nav {
+                gap: 30px;
+            }
+
+            nav a {
+                padding: 13px 25px;
+                font-size: 18px;
+            }
+        }
+
+        /* =====================================
+           НОУТБУКИ И ПК: 1200–1599 PX
+        ===================================== */
+
+        @media (min-width: 1200px) and (max-width: 1599px) {
+            .head-site__in_header {
+                font-size: 48px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 27px;
+            }
+
+            .youtube {
+                gap: 20px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: calc(50% - 15px);
+                max-width: 560px;
+            }
+        }
+
+        /* =====================================
+           ПЛАНШЕТЫ И НЕБОЛЬШИЕ НОУТБУКИ:
+           769–1199 PX
+        ===================================== */
+
+        @media (min-width: 769px) and (max-width: 1199px) {
+            header {
+                padding: 30px 15px;
+            }
+
+            .head-site__in_header {
+                font-size: 42px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 25px;
+            }
+
+            .youtube {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: calc(50% - 10px);
+            }
+
+            nav {
+                gap: 15px;
+                margin-top: 35px;
+            }
+
+            nav a {
+                padding: 9px 15px;
+                font-size: 15px;
+            }
+        }
+
+        /* =====================================
+           МАЛЕНЬКИЕ ПЛАНШЕТЫ:
+           601–768 PX
+        ===================================== */
+
+        @media (min-width: 601px) and (max-width: 768px) {
+            header {
+                padding: 25px 12px;
+            }
+
+            .head-site__in_header {
+                font-size: 36px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 22px;
+            }
+
+            .youtube {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: calc(50% - 10px);
+            }
+
+            nav {
+                margin-top: 25px;
+                gap: 12px;
+            }
+
+            nav a {
+                padding: 8px 13px;
+                font-size: 14px;
+            }
+        }
+
+        /* =====================================
+           ТЕЛЕФОНЫ:
+           361–600 PX
+        ===================================== */
+
+        @media (min-width: 361px) and (max-width: 600px) {
+            header {
+                padding: 22px 10px;
+            }
+
+            .head-site__in_header {
+                font-size: clamp(25px, 7vw, 36px);
+            }
+
+            .head-site__in_header2 {
+                font-size: clamp(16px, 4.5vw, 23px);
+            }
+
+            .youtube {
+                flex-direction: column;
+                padding: 12px;
+                gap: 15px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: 100%;
+                max-width: 560px;
+            }
+
+            nav {
+                margin-top: 20px;
+                gap: 10px;
+            }
+
+            nav a {
+                padding: 8px 13px;
+                font-size: 14px;
+            }
+        }
+
+        /* =====================================
+           МАЛЕНЬКИЕ ТЕЛЕФОНЫ:
+           ДО 360 PX
+        ===================================== */
+
+        @media (max-width: 360px) {
+            header {
+                padding: 18px 8px;
+            }
+
+            .head-site__in_header {
+                font-size: 27px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 16px;
+            }
+
+            .youtube {
+                flex-direction: column;
+                padding: 8px;
+                gap: 12px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: 100%;
+                border-radius: 7px;
+            }
+
+            nav {
+                margin-top: 15px;
+                gap: 8px;
+                padding: 5px;
+            }
+
+            nav a {
+                padding: 7px 10px;
+                font-size: 12px;
+            }
+        }
+
+        /* =====================================
+           ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНА
+        ===================================== */
+
+        @media (max-width: 950px) and (orientation: landscape) {
+            header {
+                padding: 12px 10px;
+            }
+
+            .head-site__in_header {
+                font-size: clamp(23px, 4vw, 32px);
+            }
+
+            .head-site__in_header2 {
+                font-size: clamp(15px, 2.5vw, 20px);
+                margin-top: 5px;
+            }
+
+            .youtube {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .youtube iframe,
+            .youtube video {
+                width: calc(50% - 6px);
+                max-width: none;
+            }
+
+            nav {
+                margin-top: 12px;
+                gap: 10px;
+            }
+
+            nav a {
+                padding: 7px 12px;
+                font-size: 13px;
+            }
+        }
+
+        /* =====================================
+           ОЧЕНЬ НИЗКИЕ ЭКРАНЫ В ГОРИЗОНТАЛЬНОМ РЕЖИМЕ
+        ===================================== */
+
+        @media (max-height: 450px) and (orientation: landscape) {
+            header {
+                padding: 8px;
+            }
+
+            .head-site__in_header {
+                font-size: 24px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 15px;
+            }
+
+            .youtube {
+                padding: 8px;
+            }
+
+            nav {
+                margin-top: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="head-site__in_header">Кошачьи видео</h1>
+        <h2 class="head-site__in_header2">Здесь буду выкладывать видео</h2>
+    </header>
+
+    <main>
+        <article class="youtube">
+
+            <iframe
+                src="https://www.youtube.com/embed/ZGl8vrceu1E?si=FNMi_qNWv0OWst1B&amp;start=12"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+            <video
+                src="Кот и телевизор.mp4"
+                controls>
+            </video>
+
+        </article>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">На главную</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

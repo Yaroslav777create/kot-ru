@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 популярных пород</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #13BDAC;
+        }
+
+        header {
+            background-color: #FCBA03;
+            padding: 35px 0;
+            width: 100%;
+        }
+
+        .head-site__in_header {
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .head-site__in_header2 {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            gap: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        main article {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding: 10px;
+            color: #fff;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        .one, .three, .five, .seven, .nine,
+        .eleven, .thirteen, .fifteen, .seventeen,
+        .nineteen {
+            justify-content: flex-start;
+        }
+
+        .two, .four, .six, .eight, .ten,
+        .twelve, .fourteen, .sixteen, .eighteen,
+        .twenty {
+            justify-content: flex-end;
+        }
+
+        main article p {
+            font-size: 20px;
+            padding: 10px;
+            min-width: 0;
+            overflow-wrap: break-word;
+            line-height: 1.5;
+        }
+
+        main article img {
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+            padding: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #FCBA03;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #FCBA03;
+            transition: 0.7s;
+        }
+
+        footer p {
+            padding: 10px;
+        }
+
+        /* =================================
+           НЕБОЛЬШИЕ НОУТБУКИ
+           ДО 1200 PX
+        ================================= */
+
+        @media (max-width: 1200px) {
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .head-site__in_header {
+                font-size: 42px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 25px;
+            }
+
+            main article {
+                gap: 18px;
+                margin-top: 35px;
+                padding: 12px;
+            }
+
+            main article img {
+                width: 40%;
+                max-height: 480px;
+            }
+
+            main article p {
+                flex: 1;
+                font-size: 18px;
+                padding: 8px;
+            }
+        }
+
+        /* =================================
+           ПЛАНШЕТЫ
+           ДО 768 PX
+        ================================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 25px 12px;
+            }
+
+            .head-site__in_header {
+                font-size: 34px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 21px;
+                margin-top: 8px;
+            }
+
+            main article {
+                gap: 12px;
+                margin-top: 25px;
+                padding: 10px;
+            }
+
+            main article img {
+                width: 40%;
+                max-height: 380px;
+            }
+
+            main article p {
+                flex: 1;
+                font-size: 15px;
+                line-height: 1.45;
+                padding: 6px;
+            }
+
+            nav {
+                margin-top: 25px;
+                padding: 0 12px;
+            }
+
+            nav a {
+                padding: 9px 16px;
+                font-size: 15px;
+            }
+
+            footer p {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+
+        /* =================================
+           ТЕЛЕФОНЫ
+           ДО 480 PX
+        ================================= */
+
+        @media (max-width: 480px) {
+
+            header {
+                padding: 22px 10px;
+            }
+
+            .head-site__in_header {
+                font-size: 27px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 17px;
+                margin-top: 8px;
+            }
+
+            main article {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                max-width: 100%;
+
+                margin-top: 22px;
+                padding: 12px;
+                gap: 10px;
+            }
+
+            /* ФОТОГРАФИЯ ВСЕГДА ПЕРВАЯ */
+
+            main article img {
+                order: -1;
+
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                max-height: 350px;
+
+                height: auto;
+                object-fit: contain;
+
+                border-radius: 14px;
+            }
+
+            /* ТЕКСТ ВСЕГДА ПОД ФОТОГРАФИЕЙ */
+
+            main article p {
+                order: 1;
+
+                width: 100%;
+                max-width: 100%;
+
+                flex: none;
+
+                font-size: 14px;
+                line-height: 1.5;
+
+                padding: 8px;
+                text-align: left;
+            }
+
+            nav {
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+
+            nav a {
+                padding: 8px 14px;
+                font-size: 13px;
+                border-radius: 8px;
+            }
+
+            footer p {
+                padding: 12px 8px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        /* =================================
+           МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+           ДО 360 PX
+        ================================= */
+
+        @media (max-width: 360px) {
+
+            header {
+                padding: 18px 8px;
+            }
+
+            .head-site__in_header {
+                font-size: 23px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 15px;
+            }
+
+            main article {
+                margin-top: 18px;
+                padding: 8px;
+                gap: 8px;
+            }
+
+            main article img {
+                max-height: 280px;
+                border-radius: 10px;
+            }
+
+            main article p {
+                font-size: 12px;
+                line-height: 1.45;
+                padding: 6px;
+            }
+
+            nav a {
+                padding: 7px 11px;
+                font-size: 12px;
+            }
+
+            footer p {
+                font-size: 11px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="head-site__in_header">Породы котов</h1>
+        <h1 class="head-site__in_header2">20 популярных пород</h1>
+    </header>
+    <main>
+        <article class="one">
+            <img src="https://petglobals.com/imagesaver/form/big/nbllgjhtzzu1k8em1jpa_1715961685.jpeg" alt="Мейн-кун" width="405" height="500">
+            <p>Название: Мейн-кун<br> Страна происхождения: США <br>Характер: Дружелюбный, умный, общительный. <br>Размер: Крупный. <br>Интересный факт: Мейн-куны считаются одной из крупнейших пород домашних кошек.</p>
+        </article>
+        <article class="two">
+            <p>Название: Британская короткошёрстная<br> Страна происхождения: Великобритания<br>Характер: Спокойный, независимый, уравновешенный.<br>Размер: Средний или крупный.<br>Интересный факт: У этой породы очень густая плюшевая шерсть.</p>
+            <img src="Британская короткошёрстная.jpg" alt="Британская короткошёрстная" width="405" height="700">
+        </article>
+        <article class="three">
+            <img src="https://static.tildacdn.com/tild6536-6132-4630-b362-376261643832/1000049914.jpg" alt="Шотландская вислоухая" width="345" height="460">
+            <p>Название: Шотландская вислоухая<br> Страна происхождения: Шотландия<br>Характер: Спокойный, ласковый, любознательный.<br>Размер: Средний.<br>Интересный факт: Главная особенность породы — загнутые вперёд уши.</p>
+        </article>
+        <article class="four">
+            <p>Название: Сиамская<br> Страна происхождения: Таиланд<br>Характер: Общительный, активный, разговорчивый.<br>Размер: Средний.<br>Интересный факт: Сиамские кошки известны своими голубыми глазами.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn5tJKNIXJoNNgrxAX2LVD6RQlX9lJq4ITstLcGNIqNg&s=10" alt="Сиамская" width="401" height="441">
+        </article>
+        <article class="five">
+            <img src="https://lapkins.ru/upload/iblock/f67/f67afd3971ca7cfc1272d608f69299d6.jpg" alt="Бенгальская" width="400" height="539">
+            <p>Название: Бенгальская<br> Страна происхождения: США<br>Характер: Активный, игривый, любопытный.<br>Размер: Средний или крупный.<br>Интересный факт: Шерсть бенгальской кошки напоминает окрас леопарда.</p>
+        </article>
+        <article class="six">
+            <p>Название: Персидская<br> Страна происхождения: Персия (Современный Иран).<br>Характер: Спокойный, ласковый, неторопливый.<br>Размер: Средний или крупный.<br>Интересный факт: Персидские кошки известны своей длинной и густой шерстью.</p>
+            <img src="https://lapa.shop/wp-content/uploads/2026/11/philadelfia000-427x640.jpg.webp" alt="Персидская" width="400" height="600">
+        </article>
+        <article class="seven">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROLbCVCYlJEihakAv-JwoGQM9-pvx8Ee9hITLUNaCh4BUQUbabvasugc&s=10" alt="Сфинкс" width="400" height="505">
+            <p>Название: Сфинкс<br> Страна происхождения: Канада.<br>Характер: Общительный, ласковый, энергичный.<br>Размер: Средний.<br>Интересный факт: Сфинксы почти не имеют шерсти, но их кожа требует особого ухода.</p>
+        </article>
+        <article class="eight">
+            <p>Название: Сибирская<br> Страна происхождения: Россия.<br>Характер: Смелый, дружелюбный, самостоятельный.<br>Размер: Средний или крупный.<br>Интересный факт: У сибирских кошек густая шерсть, помогающая переносить холод.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjPmajQMrlAlVUWNKtvdXHSr0yZAjmPVnqWhYxpm2Nk_mXdtz-s9FcO-36&s=10" alt="Сибирская" width="400" height="590">
+        </article>
+        <article class="nine">
+            <img src="https://orenaby.ru/breed-aby.webp" alt="Абиссинская" width="400" height="615">
+            <p>Название: Абиссинская<br> Страна происхождения: Исторически связана с Абиссинией (современная Эфиопия).<br>Характер: Любознательный, активный, игривый.<br>Размер: Средний.<br>Интересный факт: Шерсть абиссинских кошек имеет особый переливающийся окрас.</p>
+        </article>
+        <article class="ten">
+            <p>Название: Русская голубая<br> Страна происхождения: Россия.<br>Характер: Спокойный, осторожный, преданный.<br>Размер: Средний.<br>Интересный факт: У этой породы короткая голубовато-серая шерсть и зелёные глаза.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs-8S9mwxOieyl0bozWRHNccbu9Frx_ztNBL0heMp3pQ&s=10" alt="Русская голубая" width="400" height="582">
+        </article>
+        <article class="eleven">
+            <img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/1929594/yO7QpEUDsboKqGCqRiSg.jpg" alt="Рэгдолл" width="480" height="600">
+            <p>Название: Рэгдолл<br> Страна происхождения: США.<br>Характер: Спокойный, ласковый, дружелюбный.<br>Размер: Крупный.<br>Интересный факт: Название породы переводится с английского как «тряпичная кукла».</p>
+        </article>
+        <article class="twelve">
+            <p>Название: Норвежская лесная<br>Страна происхождения: Норвегия.<br>Характер: Независимый, умный, дружелюбный.<br>Размер: Крупный.<br>Интересный факт: У этой породы густая водоотталкивающая шерсть.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS71C5u1LHMh0ak-uVWzpw8LRMTOCQLc6So_SoZUvTboa00zo5Fis90najc&s=10" alt="Норвежская лесная" width="432" height="496">
+        </article>
+        <article class="thirteen">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Birmakatze_Seal-Point.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" alt="Бирманская" width="400" height="520">
+            <p>Название: Бирманская<br>Страна происхождения: Исторически связана с Бирмой.<br>Характер: Ласковый, спокойный, общительный.<br>Размер: Средний или крупный.<br>Интересный факт: Бирманские кошки известны голубыми глазами и белыми «перчатками» на лапах.</p>
+        </article>
+        <article class="fourteen">
+            <p>Название: Бомбейская<br>Страна происхождения: США.<br>Характер: Общительный, ласковый, игривый.<br>Размер: Средний.<br>Интересный факт: Бомбейских кошек часто сравнивают с маленькими чёрными пантерами.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwIlaj-sQVqlk85vH6lfp8H_glpWfZh14lc77F1iKtNzecbUu2xumGoIKk&s=10" alt="Бомбейская" width="400" height="425">
+        </article>
+        <article class="fifteen">
+            <img src="https://ilapki.com/image/element/turkish_angora.jpg" alt="Турецкая ангора" width="400" height="480">
+            <p>Название: Турецкая ангора<br>Страна происхождения: Турция.<br>Характер: Активный, умный, любознательный.<br>Размер: Средний.<br>Интересный факт: Некоторые представители породы имеют глаза разного цвета.</p>
+        </article>
+        <article class="sixteen">
+            <p>Название: Девон-рекс<br>Страна происхождения: Великобритания.<br>Характер: Игривый, любопытный, общительный.<br>Размер: Небольшой или средний.<br>Интересный факт: У девон-рексов большие уши и короткая волнистая шерсть.</p>
+            <img src="https://i.pinimg.com/736x/02/03/58/0203588c7136b448d50f5cfbef76eec5.jpg" alt="Девон-рекс" width="400" height="600">
+        </article>
+        <article class="seventeen">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/BebopsLilacPrince.JPG?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" alt="Корниш-рекс" width="400" height="500">
+            <p>Название: Корниш-рекс<br>Страна происхождения: Великобритания.<br>Характер: Активный, ласковый, энергичный.<br>Размер: Средний.<br>Интересный факт: Его шерсть очень короткая, мягкая и волнистая.</p>
+        </article>
+        <article class="eighteen">
+            <p>Название: Манчкин<br>Страна происхождения: США.<br>Характер: Игривый, любознательный, дружелюбный.<br>Размер: Небольшой или средний.<br>Интересный факт: Главная особенность породы — короткие лапы.</p>
+            <img src="https://s3.webestudio.ru/topcat/breed_article_images/6/2/0/6209facec63a00be4e09709524e586e0.jpg" alt="Манчкин" width="400" height="400">
+        </article>
+        <article class="nineteen">
+            <img src="https://www.purina.ru/sites/default/files/2021-02/CAT%20HERO_0025_Somali.jpg" alt="Сомалийская" width="500" height="480">
+            <p>Название: Сомалийская<br>Страна происхождения: США.<br>Характер: Активный, умный, любопытный.<br>Размер: Средний.<br>Интересный факт: Сомалийская кошка имеет пушистый хвост и красивую полудлинную шерсть.</p>
+        </article>
+        <article class="twenty">
+            <p>Название: Египетская мау<br>Страна происхождения: Египет.<br>Характер: Активный, преданный, осторожный.<br>Размер: Средний.<br>Интересный факт: Это одна из немногих домашних пород с естественным пятнистым рисунком шерсти.</p>
+            <img src="https://www.purina.ru/sites/default/files/2021-02/CAT%20HERO_0009_Egyptian_mau.jpg" alt="Египетская мау" width="500" height="480">
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <a href="index.html">На главную</a>
+        </nav>
+        <p>&copy; 2026 Сайт про котов. Все права защищены.</p>
+    </footer>
+</body>
+</html>

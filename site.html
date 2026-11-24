@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О сайте</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background-color: #13BDAC;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== ШАПКА ===== */
+
+        header {
+            background-color: #FCBA03;
+            padding: 35px 15px;
+            width: 100%;
+        }
+
+        .head-site__in_header {
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .head-site__in_header2 {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 55px;
+            position: sticky;
+            top: 5px;
+            background-color: #13bdac83;
+            padding: 8px;
+            z-index: 10;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #FCBA03;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #FCBA03;
+        }
+
+        /* ===== ТЕКСТ ===== */
+
+        p {
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        /* ===== ОСНОВНОЙ БЛОК ===== */
+
+        .about {
+            padding: 30px;
+            color: #fff;
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .about h2 {
+            margin-bottom: 15px;
+        }
+
+        .about li {
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .about h3 {
+            margin-top: 35px;
+            margin-bottom: 10px;
+        }
+
+        .about ul {
+            padding-left: 30px;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        footer nav {
+            margin-top: 0;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        /* =====================================
+           1. БОЛЬШИЕ МОНИТОРЫ: ОТ 1600 PX
+        ===================================== */
+
+        @media (min-width: 1600px) {
+
+            header {
+                padding: 45px 20px;
+            }
+
+            .head-site__in_header {
+                font-size: 60px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 35px;
+            }
+
+            .about {
+                padding: 45px 60px;
+                font-size: 23px;
+                max-width: 1600px;
+                margin: auto;
+            }
+
+            .about p {
+                font-size: 23px;
+            }
+
+            .about li {
+                margin: 20px 0;
+            }
+
+            nav {
+                gap: 30px;
+            }
+
+            nav a {
+                padding: 13px 25px;
+                font-size: 18px;
+            }
+
+            footer p {
+                font-size: 18px;
+            }
+        }
+
+        /* =====================================
+           2. ПК И НОУТБУКИ: 1200–1599 PX
+        ===================================== */
+
+        @media (min-width: 1200px) and (max-width: 1599px) {
+
+            .head-site__in_header {
+                font-size: 48px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 27px;
+            }
+
+            .about {
+                padding: 30px 40px;
+                font-size: 20px;
+            }
+
+            .about p {
+                font-size: 20px;
+            }
+        }
+
+        /* =====================================
+           3. ПЛАНШЕТЫ: 769–1199 PX
+        ===================================== */
+
+        @media (min-width: 769px) and (max-width: 1199px) {
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .head-site__in_header {
+                font-size: 42px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 25px;
+            }
+
+            .about {
+                padding: 25px;
+                font-size: 18px;
+            }
+
+            .about p {
+                font-size: 18px;
+            }
+
+            .about h2 {
+                font-size: 23px;
+            }
+
+            .about h3 {
+                font-size: 20px;
+                margin-top: 28px;
+            }
+
+            .about li {
+                margin: 12px 0;
+            }
+
+            nav {
+                margin-top: 35px;
+                gap: 15px;
+            }
+
+            nav a {
+                padding: 9px 15px;
+                font-size: 15px;
+            }
+
+            footer p {
+                font-size: 15px;
+            }
+        }
+
+        /* =====================================
+           4. МАЛЕНЬКИЕ ПЛАНШЕТЫ: 601–768 PX
+        ===================================== */
+
+        @media (min-width: 601px) and (max-width: 768px) {
+
+            header {
+                padding: 25px 12px;
+            }
+
+            .head-site__in_header {
+                font-size: 36px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 22px;
+            }
+
+            .about {
+                padding: 20px;
+                font-size: 17px;
+            }
+
+            .about p {
+                font-size: 17px;
+                padding: 8px;
+            }
+
+            .about h2 {
+                font-size: 21px;
+            }
+
+            .about h3 {
+                font-size: 19px;
+                margin-top: 25px;
+            }
+
+            .about ul {
+                padding-left: 25px;
+            }
+
+            .about li {
+                margin: 12px 0;
+                font-size: 16px;
+            }
+
+            nav {
+                margin-top: 25px;
+                gap: 12px;
+            }
+
+            nav a {
+                padding: 8px 13px;
+                font-size: 14px;
+            }
+
+            footer {
+                margin-top: 25px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+        }
+
+        /* =====================================
+           5. ТЕЛЕФОНЫ: 361–600 PX
+        ===================================== */
+
+        @media (min-width: 361px) and (max-width: 600px) {
+
+            header {
+                padding: 22px 10px;
+            }
+
+            .head-site__in_header {
+                font-size: clamp(25px, 7vw, 36px);
+            }
+
+            .head-site__in_header2 {
+                font-size: clamp(16px, 4.5vw, 23px);
+                margin-top: 8px;
+            }
+
+            .about {
+                padding: 18px 15px;
+                font-size: 16px;
+            }
+
+            .about h2 {
+                font-size: 21px;
+                margin-bottom: 12px;
+            }
+
+            .about h3 {
+                font-size: 19px;
+                margin-top: 25px;
+                margin-bottom: 8px;
+            }
+
+            .about p {
+                font-size: 16px;
+                padding: 7px;
+                line-height: 1.5;
+            }
+
+            .about ul {
+                padding-left: 22px;
+            }
+
+            .about li {
+                font-size: 15px;
+                margin: 12px 0;
+                line-height: 1.5;
+            }
+
+            nav {
+                margin-top: 20px;
+                gap: 10px;
+            }
+
+            nav a {
+                padding: 8px 13px;
+                font-size: 14px;
+            }
+
+            footer {
+                margin-top: 25px;
+            }
+
+            footer p {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+
+        /* =====================================
+           6. МАЛЕНЬКИЕ ТЕЛЕФОНЫ: ДО 360 PX
+        ===================================== */
+
+        @media (max-width: 360px) {
+
+            header {
+                padding: 18px 8px;
+            }
+
+            .head-site__in_header {
+                font-size: 27px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 16px;
+                margin-top: 7px;
+            }
+
+            .about {
+                padding: 15px 10px;
+                font-size: 15px;
+            }
+
+            .about h2 {
+                font-size: 19px;
+                margin-bottom: 10px;
+            }
+
+            .about h3 {
+                font-size: 17px;
+                margin-top: 22px;
+                margin-bottom: 8px;
+            }
+
+            .about p {
+                font-size: 14px;
+                padding: 6px;
+                line-height: 1.5;
+            }
+
+            .about ul {
+                padding-left: 20px;
+            }
+
+            .about li {
+                font-size: 14px;
+                margin: 10px 0;
+                line-height: 1.4;
+            }
+
+            nav {
+                margin-top: 15px;
+                gap: 8px;
+                padding: 5px;
+            }
+
+            nav a {
+                padding: 7px 10px;
+                font-size: 12px;
+            }
+
+            footer {
+                margin-top: 20px;
+            }
+
+            footer p {
+                font-size: 12px;
+                padding: 7px;
+            }
+        }
+
+        /* =====================================
+           ГОРИЗОНТАЛЬНЫЙ ТЕЛЕФОН
+        ===================================== */
+
+        @media (max-width: 950px) and (orientation: landscape) {
+
+            header {
+                padding: 12px 10px;
+            }
+
+            .head-site__in_header {
+                font-size: clamp(23px, 4vw, 32px);
+            }
+
+            .head-site__in_header2 {
+                font-size: clamp(15px, 2.5vw, 20px);
+                margin-top: 5px;
+            }
+
+            .about {
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .about h3 {
+                font-size: 18px;
+                margin-top: 22px;
+            }
+
+            .about p {
+                font-size: 15px;
+                padding: 7px;
+            }
+
+            .about li {
+                font-size: 15px;
+                margin: 9px 0;
+            }
+
+            nav {
+                margin-top: 12px;
+                gap: 10px;
+            }
+
+            nav a {
+                padding: 7px 12px;
+                font-size: 13px;
+            }
+
+            footer {
+                margin-top: 20px;
+            }
+        }
+
+        /* =====================================
+           ОЧЕНЬ НИЗКИЕ ЭКРАНЫ В ГОРИЗОНТАЛЬНОМ РЕЖИМЕ
+        ===================================== */
+
+        @media (max-height: 450px) and (orientation: landscape) {
+
+            header {
+                padding: 8px;
+            }
+
+            .head-site__in_header {
+                font-size: 24px;
+            }
+
+            .head-site__in_header2 {
+                font-size: 15px;
+            }
+
+            .about {
+                padding: 12px 20px;
+            }
+
+            .about h3 {
+                margin-top: 15px;
+            }
+
+            nav {
+                margin-top: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="head-site__in_header">О сайте</h1>
+        <h2 class="head-site__in_header2">Расскажу подробнее о сайте</h2>
+    </header>
+
+    <main>
+        <article class="about">
+
+            <h2>🐱 О проекте «кот.ру»</h2>
+
+            <p>
+                Добро пожаловать на сайт «кот.ру»!
+                Этот сайт создан для всех, кто любит кошек
+                и хочет узнать о них больше.
+            </p>
+
+            <h2>Здесь вы можете найти:</h2>
+
+            <ul>
+                <li><b>100 фактов о котах</b> — интересные сведения о кошках.</li>
+                <li><b>Породы котов</b> — информация о 20 популярных породах.</li>
+                <li><b>Кошачьи видео</b> — забавные и интересные ролики с котами.</li>
+                <li><b>Галерея</b> — фотографии пушистых любимцев.</li>
+                <li><b>Информация о сайте</b> — история создания и цель проекта.</li>
+                <li><b>О коте создателя сайта</b> — знакомство с котом автора проекта.</li>
+            </ul>
+
+            <h3>Зачем создан этот сайт?</h3>
+
+            <p>
+                Главная цель проекта — собрать интересную и полезную
+                информацию о кошках в одном месте.
+            </p>
+
+            <h3>Кто создал сайт?</h3>
+
+            <p>
+                Сайт создан самостоятельно в рамках проекта
+                по веб-разработке с использованием HTML и CSS.
+            </p>
+
+            <h3>Спасибо за посещение!</h3>
+
+            <p>
+                Спасибо, что посетили «кот.ру»! ❤️
+                Кошки делают наш мир уютнее!
+            </p>
+
+        </article>
+    </main>
+
+    <footer>
+
+        <nav>
+            <a href="index.html">На главную</a>
+        </nav>
+
+        <p>&copy; 2026 Сайт про котов. Все права защищены.</p>
+
+    </footer>
+
+</body>
+</html>

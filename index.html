@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>кот.ру</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "Roboto", sans-serif;
+            }
+            body {
+                background-color: #13BDAC;
+            }
+            header {
+                background-color: #FCBA03;
+                padding: 35px 0;
+                width: 100%;
+            }
+            .head-site__in_header {
+                text-align: center;
+                font-size: 50px;
+                color: #fff;
+            }
+            .head-site__in_header2 {
+                text-align: center;
+                font-size: 30px;
+                color: #fff;
+                gap: 20px;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+                margin-top: 55px;
+                position: sticky;
+                top: 5px;
+                background-color: #13bdac83;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #FCBA03;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+            a:hover {
+                background-color: #fff;
+                color: #FCBA03;
+                transition: 0.7s;
+            }
+            .last-news__in_main {
+                color:#fff;
+                margin-top: 50px;
+                padding: 20px;
+            }
+            .last-news__in_main2 {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                text-align: center;
+                margin-top: 50px;
+                padding: 20px;
+            }
+            .news1 {
+                margin-top: 50px;
+                padding: 20px;
+            }
+            .news1_text {
+                color: #fff;
+                font-size: 20px;
+                background-color: rgb(88, 88, 88);
+                padding: 20px;
+                border-radius: 20px;
+                gap: 70px;
+            }
+            .news2 {
+                margin-top: 50px;
+                padding: 20px;
+            }
+            .news2_text {
+                color: #fff;
+                font-size: 20px;
+                background-color: rgb(88, 88, 88);
+                padding: 20px;
+                border-radius: 20px;
+            }
+            p{
+                padding: 10px;
+            }
+
+/* =====================================
+   1. БОЛЬШИЕ МОНИТОРЫ — ОТ 1600px
+===================================== */
+
+@media (min-width: 1600px) {
+
+    header {
+        padding: 45px 0;
+    }
+
+    .head-site__in_header {
+        font-size: 60px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 35px;
+    }
+
+    nav {
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 15px 22px;
+        border-radius: 8px;
+    }
+
+    .last-news__in_main2 {
+        gap: 35px;
+        margin-top: 60px;
+    }
+
+    .last-news__in_main2 img {
+        width: 512px;
+        height: 384px;
+        object-fit: cover;
+    }
+
+    .last-news__in_main {
+        margin-top: 60px;
+        padding: 30px;
+    }
+
+    .news_title__in_main {
+        font-size: 36px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 23px;
+        padding: 25px;
+        line-height: 1.6;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+
+/* =====================================
+   2. КОМПЬЮТЕРЫ — 1200–1599px
+===================================== */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    header {
+        padding: 35px 0;
+    }
+
+    .head-site__in_header {
+        font-size: 50px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 18px;
+        margin-top: 45px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 11px 16px;
+        border-radius: 6px;
+    }
+
+    .last-news__in_main2 {
+        gap: 20px;
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .last-news__in_main2 img {
+        width: 40%;
+        max-width: 512px;
+        height: auto;
+    }
+
+    .last-news__in_main {
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .news_title__in_main {
+        font-size: 32px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.5;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+}
+
+
+/* =====================================
+   3. НОУТБУКИ — 769–1199px
+===================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    header {
+        padding: 30px 0;
+    }
+
+    .head-site__in_header {
+        font-size: 42px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 10px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 11px;
+        border-radius: 5px;
+    }
+
+    .last-news__in_main2 {
+        gap: 15px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .last-news__in_main2 img {
+        width: 45%;
+        max-width: 512px;
+        height: auto;
+    }
+
+    .last-news__in_main {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .news_title__in_main {
+        font-size: 27px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 17px;
+        padding: 16px;
+        line-height: 1.5;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================
+   4. ПЛАНШЕТЫ — 481–768px
+===================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        padding: 25px 10px;
+    }
+
+    .head-site__in_header {
+        font-size: 36px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 21px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin: 20px 8px 0;
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 5px 7px;
+        border-radius: 4px;
+    }
+
+    .last-news__in_main2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 25px;
+        padding: 12px;
+    }
+
+    .last-news__in_main2 img {
+        width: 90%;
+        max-width: 512px;
+        height: auto;
+    }
+
+    .last-news__in_main {
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    .news_title__in_main {
+        font-size: 25px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 18px;
+        padding: 10px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 16px;
+        padding: 14px;
+        line-height: 1.5;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+/* =====================================
+   5. ТЕЛЕФОНЫ — 361–480px
+===================================== */
+
+@media (min-width: 361px) and (max-width: 480px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .head-site__in_header {
+        font-size: 30px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin: 12px 8px 0;
+        padding: 5px;
+        top: 0;
+    }
+
+    nav a {
+        width: 85%;
+        box-sizing: border-box;
+        font-size: 11px;
+        padding: 6px 5px;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    .last-news__in_main2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .last-news__in_main2 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .last-news__in_main {
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .news_title__in_main {
+        font-size: 22px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 12px;
+        padding: 8px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 15px;
+        padding: 12px;
+        border-radius: 10px;
+        line-height: 1.5;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+/* =====================================
+   6. МАЛЕНЬКИЕ ТЕЛЕФОНЫ — ДО 360px
+===================================== */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 15px 8px;
+    }
+
+    .head-site__in_header {
+        font-size: 26px;
+    }
+
+    .head-site__in_header2 {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        margin: 10px 6px 0;
+        padding: 4px;
+        top: 0;
+    }
+
+    nav a {
+        width: 80%;
+        box-sizing: border-box;
+        font-size: 10px;
+        padding: 5px 4px;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    .last-news__in_main2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    .last-news__in_main2 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .last-news__in_main {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .news_title__in_main {
+        font-size: 20px;
+    }
+
+    .news1,
+    .news2 {
+        margin-top: 10px;
+        padding: 6px;
+    }
+
+    .news1_text,
+    .news2_text {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 8px;
+        line-height: 1.4;
+    }
+
+    footer p {
+        font-size: 11px;
+        text-align: center;
+    }
+}
+
+
+
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="head-site__in_header">кот.ру</h1>
+            <h1 class="head-site__in_header2">Сайт про котов</h1>
+            <h1 class="head-site__in_header2">Добро пожаловать!</h1>
+        </header>
+        <main>
+            <nav>
+                <a href="1.html">100 фактов о котах</a>
+                <a href="porody.html">Породы котов</a>
+                <a href="galereya.html">Кошачья галерея</a>
+                <a href="video.html">Кошачьи видео</a>
+                <a href="site.html">О сайте</a>
+                <a href="cat.html">О коте создателя сайта</a>
+            </nav>
+            <article class="last-news__in_main2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIVKdGliYTkUQmUlHf01FzWXjOLY-MxSiPoDyDeVKypQ&s=10" height="384px" width="512px">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPJ3IfsdAtrZmrI25K4XdICTFgBWr8jKldnk480Pd5RQ&s=10" height="384px" width="512px">
+            </article>
+            <article class="last-news__in_main">
+                <h1 class="news_title__in_main">Последние новости</h1>
+            </article>
+            <article class="news2">
+                <h2 class="news2_text">Друзья! Хочу рассказать что каждое субботу и воскресенье буду выкладываться свежие видео и фото что и с моим котом, то и с другими котами! <br> <br> Дата публикации: 15 ноября 2026, 15.00</h2>
+            </article>
+            <article class="news1">
+                <h2 class="news1_text">Друзья! Недавно я создал сайт о котах, спасибо всем кто посетил этот сайт! Мне очень приятно! На этом сайте вы найдете много интересной информации о котах, много видео и фото и конечно же сможете познакомиться с моим котом по имени Сажик! <br> <br> Дата публикации: 11 ноября 2026, 17.43</h2>
+            </article>
+        </main>
+        <footer>
+            <p>&copy; 2026 Сайт про котов. Все права защищены.</p>
+        </footer>
+</body>        
+</html>
